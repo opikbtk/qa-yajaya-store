@@ -1,28 +1,21 @@
-# QA Testing — Website yajaya.store
+# Pengujian Website yajaya.store
 
-Laporan tugas Testing & QA. Objek: website katalog kaos polos & sablon DTF satuan (UMKM, Parung, Bogor) — https://yajaya.store
+Repo ini berisi laporan tugas Testing dan QA kami. Website yang diuji adalah yajaya.store, toko online kaos polos dan sablon DTF satuan milik Yajaya Store di Parung, Bogor. Alasan kami memilih website ini sederhana: skalanya masih UMKM, fiturnya tidak terlalu besar, dan ordernya masih lewat WhatsApp, jadi masih masuk akal untuk diuji satu per satu dalam waktu tugas ini.
 
-## Standar acuan
-- ISO/IEC/IEEE 29119-1:2022, 29119-2:2021, 29119-3:2021, 29119-4:2021, 29119-5:2024
-- ISO/IEC 25010:2023, ISO/IEC 25002:2024, ISO/IEC 25040:2024
-- IEEE 1012-2024 (pendukung)
-- Detail + jurnal: `references/standards-journals.md`
+Pengujian kami mengacu ke standar ISO/IEC/IEEE 29119 seri testing dan ISO/IEC 25010:2023 untuk model kualitas produk. Detail standar dan jurnal yang kami pakai ada di `references/standards-journals.md`.
 
-## Isi direktori
-- `docs/` — inventaris situs 7 Nov 2026
-- `test-plan/` — test plan (29119-3)
-- `test-cases/` — 40+ test case manual (black-box, grey-box, experience-based; white-box bersyarat akses kode)
-- `automation/` — test otomatis Playwright (smoke + regresi, keyword-driven 29119-5:2024) — *dalam pengerjaan*
-- `bug-reports/` — 11 kandidat bug dari inventaris
-- `interview/` — panduan wawancara QA/tester ≥3 tahun — *narasumber belum ada*
-- `references/` — standar & jurnal Sinta 1-3 / internasional 2022-2026
+## Isi repo ini
 
-## Status
-- Inventaris: selesai 7 Nov 2026
-- Test plan & test case manual: draf selesai, eksekusi formal menyusul
-- White-box: BLOCKED — butuh akses source code/repo (belum dikonfirmasi)
-- Wawancara: BELUM — butuh kandidat narasumber
-- Test otomatis: dalam pengerjaan
+Folder `docs/` berisi inventaris website hasil penelusuran pertama kami tanggal 7 November 2026. Folder `test-plan/` berisi test plan yang kami susun mengikuti format ISO/IEC/IEEE 29119-3. Folder `test-cases/` berisi test case manual, ada 40 lebih, mencakup black-box, grey-box, dan experience-based. White-box awalnya sempat tertahan karena kami belum punya akses ke source code, tapi sekarang sudah bisa jalan setelah kami berhasil masuk ke repo privatnya dan membaca kodenya.
 
-## Cara menjalankan test otomatis
-Lihat `automation/README.md` (setelah dibuat).
+Folder `automation/` berisi test otomatis. Kami pakai Playwright, tapi instalasi browsernya gagal terus di mesin ini karena download dari CDN-nya putus di sekitar 90 persen, sudah dicoba tiga kali. Jadi untuk sementara yang sudah jalan adalah test otomatis level HTTP pakai Node, hasilnya 5 dari 5 lolos. Script Playwright-nya tetap kami simpan di sini supaya bisa dijalankan di mesin lain.
+
+Folder `bug-reports/` berisi laporan bug yang kami temukan, sekarang sudah 13 bug. Folder `interview/` berisi panduan wawancara untuk QA atau tester yang pengalamannya minimal tiga tahun. Narasumbernya sendiri masih dicari.
+
+## Status sekarang
+
+Inventaris sudah selesai tanggal 7 November 2026. Test plan dan test case manual sudah jadi drafnya, eksekusi formalnya sebagian sudah jalan. White-box sudah dikerjakan, dan dari kode ketahuan penyebab lima bug, termasuk kenapa filter warna dan tombol reset tidak berfungsi. Wawancara masih menunggu narasumber. Test otomatis Playwright masih tertahan masalah download browser, sedangkan test HTTP-nya sudah jalan.
+
+## Menjalankan test otomatis
+
+Untuk test HTTP, cukup jalankan `node http-smoke.js` di dalam folder `automation/`. Untuk test Playwright, caranya ada di `automation/README.md`.
