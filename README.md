@@ -77,7 +77,7 @@ Konsekuensinya, defect yang dilaporkan di sini selalu disertai langkah reproduks
 - **Inventaris website:** selesai. Website multi-halaman, 19 produk, login Google-only, order lewat WhatsApp.
 - **Test plan:** selesai, mengikuti inventaris terbaru.
 - **Test case manual:** 40 test case sudah ditulis, sebagian sudah dieksekusi saat inventarisasi.
-- **Bug report:** 23 bug sudah didokumentasikan (BUG-01 sampai BUG-23), lengkap dengan langkah reproduksi, severity, dan priority.
+- **Bug report:** 10 bug sudah didokumentasikan (BUG-01 sampai BUG-10), lengkap dengan langkah reproduksi, severity, dan priority.
 - **Test otomatis:** HTTP smoke test sudah jalan (5 dari 5 lolos). Otomatisasi E2E pindah ke Cypress (Tahap 6).
 - **Dashboard:** sudah diuji dengan akun Google (akun tes 'hansenfarm') — menu, statistik, form order 6 langkah, dan tracking sudah diperiksa. Yang belum bisa diuji: timeline tracking produksi dan invoice, karena keduanya baru muncul setelah ada pesanan.
 - **Wawancara:** belum ada narasumber. Panduan wawancara sudah siap; transkrip akan diisi setelah wawancara nyata (Tahap 7).
