@@ -19,10 +19,9 @@ Tujuan rinciannya:
 
 1. Memverifikasi semua fungsi yang terlihat oleh pelanggan berjalan sesuai harapan: navigasi multi-halaman, login dan register, pencarian, filter, sortir, halaman detail produk, kalkulator sablon, galeri, blog, dan order lewat WhatsApp.
 2. Memverifikasi konsistensi konten dan harga di semua tempat produk itu muncul: kartu katalog, halaman detail, kategori di Home, dan tabel pricelist.
-3. Memastikan fitur yang sudah berjalan tetap berjalan setelah ada perbaikan atau update (regression testing).
-4. Menilai kualitas website menurut ISO/IEC 25010:2023 pada lima karakteristik prioritas: functional suitability, interaction capability, reliability, performance efficiency, dan security (sebatas yang bisa diuji dari luar).
-5. Mendokumentasikan setiap defect yang ditemukan dengan langkah reproduksi, bukti, severity, dan priority, supaya pemilik toko bisa memperbaikinya berdasarkan urutan prioritas.
-6. Menghasilkan bukti pengujian yang bisa dipertanggungjawabkan: test case yang bisa dijalankan ulang, log eksekusi, dan test report dengan verdict yang jelas.
+3. Menilai kualitas website menurut ISO/IEC 25010:2023 pada lima karakteristik prioritas: functional suitability, interaction capability, reliability, performance efficiency, dan security (sebatas yang bisa diuji dari luar).
+4. Mendokumentasikan setiap defect yang ditemukan dengan langkah reproduksi, bukti, severity, dan priority, supaya pemilik toko bisa memperbaikinya berdasarkan urutan prioritas.
+5. Menghasilkan bukti pengujian yang bisa dipertanggungjawabkan: test case yang bisa dijalankan ulang, log eksekusi, dan test report dengan verdict yang jelas.
 
 Yang bukan tujuan pengujian ini: menilai kualitas kode sumber, mengukur code coverage, menguji database atau API internal, dan melakukan penetration testing penuh. Semua itu berada di luar sudut pandang pelanggan.
 
@@ -102,10 +101,9 @@ Yang bukan tujuan pengujian ini: menilai kualitas kode sumber, mengukur code cov
 
 1. Semua test case manual prioritas High sudah dieksekusi, dan hasilnya tercatat di log eksekusi.
 2. Semua defect yang ditemukan sudah dilaporkan di dokumen bug report dengan severity, priority, langkah reproduksi, dan status.
-3. Regression checklist (fitur inti: pencarian, filter, order WhatsApp, konsistensi harga) sudah dieksekusi.
-4. Test otomatis (Cypress E2E smoke, JMeter, dan ZAP baseline scan) sudah dijalankan, atau statusnya dicatat sebagai `[DIISI_SETELAH_EKSEKUSI]` bila belum bisa dijalankan.
-5. Test report sudah berisi verdict akhir berdasarkan kerangka ISO/IEC 25040:2024.
-6. Wawancara dengan QA/tester berpengalaman minimal 3 tahun sudah dilakukan dan transkripnya sudah diisi, atau statusnya dicatat sebagai `[DIISI_SETELAH_WAWANCARA]`.
+3. Test otomatis (Cypress E2E smoke, JMeter, dan ZAP baseline scan) sudah dijalankan, atau statusnya dicatat sebagai `[DIISI_SETELAH_EKSEKUSI]` bila belum bisa dijalankan.
+4. Test report sudah berisi verdict akhir berdasarkan kerangka ISO/IEC 25040:2024.
+5. Wawancara dengan QA/tester berpengalaman minimal 3 tahun sudah dilakukan dan transkripnya sudah diisi, atau statusnya dicatat sebagai `[DIISI_SETELAH_WAWANCARA]`.
 
 ### 3.3 Kriteria penangguhan (Suspension Criteria)
 
@@ -139,7 +137,7 @@ Catatan: laporan ini adalah tugas kelompok. Setiap anggota harus tercatat sebaga
 | Tool | Kegunaan | Status |
 |---|---|---|
 | Google Chrome, Mozilla Firefox, Microsoft Edge | Browser pengujian manual dan compatibility testing | Tersedia |
-| Cypress | Automation E2E: login, navigasi, katalog, regression smoke | Draf skrip (Tahap 6), belum dieksekusi |
+| Cypress | Automation E2E: login, navigasi, katalog | Draf skrip (Tahap 6), belum dieksekusi |
 | Apache JMeter | Performance testing: load, stress, spike | Rencana test case (Tahap 6), belum dieksekusi |
 | OWASP ZAP | Security DAST: baseline scan, header keamanan, uji input | Panduan (Tahap 6), belum dieksekusi |
 | Node.js | HTTP smoke test (pengganti sementara saat Playwright gagal) | Tersedia, hasil 5/5 lolos |
@@ -164,31 +162,24 @@ Strategi pengujian proyek ini mengikuti ISO/IEC/IEEE 29119-1:2022 (konsep) dan I
 
 | Lapisan | Tool | Cakupan |
 |---|---|---|
-| E2E | Cypress | Login valid dan invalid, navigasi antar halaman, katalog dan filter, regression smoke (fitur inti) |
+| E2E | Cypress | Login valid dan invalid, navigasi antar halaman, katalog dan filter |
 | Performance | Apache JMeter | Load (50–100 user), stress (200–500 user), spike (lonjakan 10 ke 200 user); metrik response time, throughput, error rate |
 | Security DAST | OWASP ZAP | Baseline scan, pemeriksaan header keamanan HTTP, pemindaian pasif dan aktif pada halaman publik |
 
 Semua skrip otomatisasi masih berupa draf dan belum dieksekusi di lingkungan final. Hasil eksekusinya akan diisi di test report dengan penanda `[DIISI_SETELAH_EKSEKUSI]`.
 
-### 5.3 Regression Testing
-
-Regression testing dilakukan dalam dua bentuk:
-
-1. **Selective/partial regression checklist** — daftar periksa fitur inti (pencarian, filter kategori, order WhatsApp, konsistensi harga, tautan sosial) yang dieksekusi ulang setiap kali website diperbarui. Checklist lengkapnya ada di dokumen test case manual.
-2. **Regression smoke otomatis (Cypress)** — skrip smoke yang menjalankan skenario inti (buka home, buka katalog, cari produk, buka detail produk) setiap kali ada perubahan versi website.
-
-### 5.4 Karakteristik kualitas yang dinilai (ISO/IEC 25010:2023)
+### 5.3 Karakteristik kualitas yang dinilai (ISO/IEC 25010:2023)
 
 | Karakteristik | Prioritas | Cara dinilai |
 |---|---|---|
 | Functional Suitability | Tinggi | Test case Kategori 1 + Cypress E2E |
 | Interaction Capability | Tinggi | Test case Kategori 2 (usability & compatibility) |
-| Reliability | Tinggi | Regression testing + konsistensi hasil di semua browser |
+| Reliability | Tinggi | Konsistensi hasil di semua browser |
 | Performance Efficiency | Sedang | JMeter (response time, throughput, error rate) |
 | Security | Sedang | DAST ZAP + uji input dasar Kategori 3 |
 | Maintainability, Flexibility, Safety | Tidak dinilai | Butuh akses kode dan infrastruktur |
 
-### 5.5 Alasan manual + otomatis dipakai bersamaan
+### 5.4 Alasan manual + otomatis dipakai bersamaan
 
 Kurmaku dkk. (2022) me-meta-analisis 21 studi dan menyimpulkan testing otomatis lebih hemat biaya, coverage, dan waktu, tetapi testing manual sama baiknya, bahkan sedikit lebih baik, dalam menemukan fault — dan bedanya tidak signifikan secara statistik. Karena itu proyek ini memakai keduanya: manual untuk menemukan masalah yang butuh penilaian manusia (tampilan, konsistensi konten, alur bisnis), otomatis untuk mengulang skenario yang sama secara konsisten.
 
