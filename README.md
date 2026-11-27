@@ -59,33 +59,18 @@ Konsekuensinya, defect yang dilaporkan di sini selalu disertai langkah reproduks
 
 ## 3. Alasan Pemilihan Metode
 
-### Black-Box Testing
+### Metode Pengujian
 
-Metode utama. Alasannya sederhana: sebagai tester dari sisi pelanggan, satu-satunya yang bisa kami amati adalah perilaku website dari luar. Black-box testing memakai teknik Equivalence Partitioning, Boundary Value Analysis, dan Decision Table untuk menguji login, navigasi, katalog, filter, pencarian, detail produk, dan order — tanpa perlu tahu cara kerja di dalamnya. Jurnal Chrisna dkk. (2024, Sinta 2) menunjukkan kombinasi black-box dengan white-box dan otomatisasi efektif untuk sistem web; di proyek ini porsi white-box-nya diganti dengan pengujian perilaku HTTP dan validasi input eksternal, karena akses kode tidak tersedia.
+- **Black-Box Testing:** Pengujian fungsionalitas website berdasarkan input dan output yang diharapkan, tanpa melihat struktur kode internal (memakai teknik *Equivalence Partitioning*, *Boundary Value Analysis*, dan *Decision Table*).
+- **UAT / Beta Testing:** Pengujian apakah website bisa dipakai pembeli sungguhan untuk menyelesaikan tujuannya: menemukan produk, memahami harga, dan memesan.
+- **Usability & UI Testing:** Evaluasi kemudahan penggunaan, konsistensi tampilan, keterbacaan teks, dan kejelasan umpan balik sistem.
+- **Compatibility Testing:** Pengujian kesesuaian tampilan dan fungsi pada berbagai peramban dan ukuran layar.
 
-### UAT / Beta Testing
+### Lingkungan & Alat Bantu (Tools)
 
-UAT menguji apakah website ini bisa dipakai oleh pembeli sungguhan untuk menyelesaikan tujuannya: menemukan produk, memahami harga, dan memesan. Skenario UAT di proyek ini adalah alur bisnis end-to-end dari sudut pandang pelanggan nyata, ditambah kuesioner kepuasan skala Likert. Safira dkk. (2023) memakai UAT sebagai penutup pengujian sistem web dan mencapai 94,67% — pola yang sama kami pakai di sini: UAT adalah penentu akhir apakah website layak dipakai, bukan sekadar apakah fiturnya berjalan.
-
-### Regression Testing
-
-Regression testing memastikan fitur yang sudah berjalan tidak rusak setelah ada perbaikan atau update: pencarian, filter, sortir, order WhatsApp, dan konsistensi harga dicek ulang setiap kali website berubah. Ini penting karena website yang masih dikembangkan bisa saja memperbaiki satu hal sambil merusak hal lain tanpa disadari.
-
-### Automation E2E — Cypress
-
-Otomatisasi dipakai untuk skenario yang diulang terus: login, navigasi antar halaman, dan alur katalog. Cypress dipilih karena dirancang khusus untuk pengujian end-to-end di browser, dengan sinkronisasi otomatis dan debugging yang mudah — cocok untuk tim kecil yang menguji alur pelanggan dari luar. García dkk. (2024) membandingkan Cypress dengan Selenium, Puppeteer, dan Playwright; Gosik & Miłosz (2025) membandingkan langsung Cypress dan Playwright dan mencatat trade-off keduanya. Playwright lebih cepat dan lebih hemat memori, tetapi Cypress dipilih di sini karena skenarionya lebih mudah ditulis dan dirawat untuk alur pelanggan. Catatan: skrip Cypress di repo ini masih berupa draf dan belum dieksekusi di lingkungan final (direncanakan, Tahap 6).
-
-### Performance Testing — Apache JMeter
-
-Performance testing mengukur apakah website tetap responsif saat banyak pengunjung datang bersamaan, memakai skenario load testing (50–100 user), stress testing (200–500 user), dan spike testing (lonjakan 10 ke 200 user), dengan metrik response time, throughput, dan error rate. Indrianto (2023) memakai pola yang sama — 50 dan 100 sampel dengan ramp-up 10 detik — dan Annisa dkk. (2026) menunjukkan website yang diuji stabil sampai 200 user bersamaan, lalu menurun di atas 300 user. Target SLA di proyek ini: response time rata-rata di bawah 2 detik. Rencana lengkapnya menyusul (direncanakan, Tahap 6).
-
-### Security Testing — DAST dengan OWASP ZAP
-
-Karena tidak ada akses kode, pengujian keamanan dilakukan dari luar dengan Dynamic Application Security Testing (DAST): OWASP ZAP memindai aplikasi yang sedang berjalan, memeriksa header keamanan HTTP, dan menguji input form login dengan payload dasar seperti SQL Injection (`' OR '1'='1`) dan XSS. DAST menemukan masalah konfigurasi, autentikasi, dan penanganan request yang hanya muncul saat aplikasi berjalan — hal yang tidak bisa ditemukan dari membaca spesifikasi. Panduan lengkapnya menyusul (direncanakan, Tahap 6).
-
-### Kenapa manual dan otomatis dipakai bersamaan
-
-Kurmaku dkk. (2022) me-meta-analisis 21 studi dan menyimpulkan testing otomatis lebih hemat biaya, coverage, dan waktu, tetapi testing manual sama baiknya, bahkan sedikit lebih baik, dalam menemukan fault — dan bedanya tidak signifikan secara statistik. Karena itu proyek ini memakai keduanya: manual untuk menemukan masalah yang butuh penilaian manusia (tampilan, konsistensi konten, alur bisnis), otomatis untuk mengulang skenario yang sama secara konsisten.
+- **Peramban:** Google Chrome.
+- **Dokumentasi Test Case & Bug Report:** Markdown.
+- **Alat Otomatis:** Cypress untuk E2E, Apache JMeter untuk performance testing, dan OWASP ZAP untuk security DAST (direncanakan, Tahap 6).
 
 ## 4. Status Proyek
 
