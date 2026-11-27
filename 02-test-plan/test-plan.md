@@ -101,9 +101,9 @@ Yang bukan tujuan pengujian ini: menilai kualitas kode sumber, mengukur code cov
 
 1. Semua test case manual prioritas High sudah dieksekusi, dan hasilnya tercatat di log eksekusi.
 2. Semua defect yang ditemukan sudah dilaporkan di dokumen bug report dengan severity, priority, langkah reproduksi, dan status.
-3. Test otomatis (Cypress E2E smoke, JMeter, dan ZAP baseline scan) sudah dijalankan, atau statusnya dicatat sebagai `[DIISI_SETELAH_EKSEKUSI]` bila belum bisa dijalankan.
+3. Test otomatis (Cypress E2E smoke, JMeter, dan ZAP baseline scan) sudah dijalankan, atau statusnya dicatat sebagai belum dijalankan.
 4. Test report sudah berisi verdict akhir berdasarkan kerangka ISO/IEC 25040:2024.
-5. Wawancara dengan QA/tester berpengalaman minimal 3 tahun sudah dilakukan dan transkripnya sudah diisi, atau statusnya dicatat sebagai `[DIISI_SETELAH_WAWANCARA]`.
+5. Wawancara dengan QA/tester berpengalaman minimal 3 tahun sudah dilakukan dan transkripnya sudah diisi, atau statusnya dicatat sebagai belum dilakukan.
 
 ### 3.3 Kriteria penangguhan (Suspension Criteria)
 
@@ -166,7 +166,7 @@ Strategi pengujian proyek ini mengikuti ISO/IEC/IEEE 29119-1:2022 (konsep) dan I
 | Performance | Apache JMeter | Load (50–100 user), stress (200–500 user), spike (lonjakan 10 ke 200 user); metrik response time, throughput, error rate |
 | Security DAST | OWASP ZAP | Baseline scan, pemeriksaan header keamanan HTTP, pemindaian pasif dan aktif pada halaman publik |
 
-Semua skrip otomatisasi masih berupa draf dan belum dieksekusi di lingkungan final. Hasil eksekusinya akan diisi di test report dengan penanda `[DIISI_SETELAH_EKSEKUSI]`.
+Skrip otomatisasi direncanakan di Tahap 6 dan belum dieksekusi. Hasil eksekusinya akan diisi di test report setelah dijalankan.
 
 ### 5.3 Karakteristik kualitas yang dinilai (ISO/IEC 25010:2023)
 
@@ -200,7 +200,7 @@ Deadline pengumpulan laporan: **Sabtu, 5 Desember 2026**. Aturan pacing dari dos
 | Eksekusi formal test case + retest | 2–4 Des 2026 | Belum dimulai |
 | Finalisasi laporan + push terakhir | 4–5 Des 2026 | Belum dimulai |
 
-Jadwal di atas adalah rencana. Kalau wawancara belum dapat narasumber, bagian yang tertunda dicatat sebagai `[DIISI_SETELAH_WAWANCARA]` atau `Blocked` di laporan, bukan diisi dengan hasil karangan.
+Jadwal di atas adalah rencana. Kalau wawancara belum dapat narasumber, bagian yang tertunda dicatat sebagai belum dilakukan atau `Blocked` di laporan, bukan diisi dengan hasil karangan.
 
 ## 7. Risiko dan Mitigasi
 
@@ -208,11 +208,11 @@ Jadwal di atas adalah rencana. Kalau wawancara belum dapat narasumber, bagian ya
 |---|---|---|---|
 | R1 | Website berubah selama pengujian | Inventaris dan test case kedaluwarsa | Setiap perubahan website dicek ulang dulu sebelum laporan final |
 | R2 | Dashboard butuh akun Google asli, tidak ada akun demo | Invoice dan beda admin-customer belum bisa diuji | Dashboard sudah diuji dengan akun Google tes; invoice dan beda admin-customer ditulis sebagai keterbatasan, bukan defect |
-| R3 | Narasumber wawancara belum ada | Syarat wawancara tidak terpenuhi | Cari narasumber lebih awal lewat jaringan kampus dan komunitas; bila sampai akhir belum ada, panduan wawancara tetap dilampirkan dan transkrip ditandai `[DIISI_SETELAH_WAWANCARA]` |
+| R3 | Narasumber wawancara belum ada | Syarat wawancara tidak terpenuhi | Cari narasumber lebih awal lewat jaringan kampus dan komunitas; bila sampai akhir belum ada, panduan wawancara tetap dilampirkan dan transkrip ditulis setelah wawancara dilakukan |
 | R4 | Instalasi browser/tool otomatisasi gagal (pernah terjadi pada Playwright) | Otomatisasi tertunda | Siapkan fallback: HTTP smoke test (Node) untuk pemeriksaan dasar; jalankan Cypress/JMeter di mesin lain bila perlu |
 | R5 | Anggota kelompok tidak tercatat sebagai contributor | Penilaian kelompok bermasalah | Semua push dikoordinasikan dulu; pembagian tugas dan username GitHub anggota dicatat sebelum push berikutnya |
 | R6 | Pengujian mobile belum dilakukan | Defect responsif tidak ketahuan | Alokasikan sesi khusus mobile (360px, 768px) sebelum finalisasi |
-| R7 | Hasil eksekusi dikarang karena dikejar deadline | Integritas laporan rusak | Aturan keras: bagian yang belum dieksekusi diberi penanda `[DIISI_SETELAH_EKSEKUSI]` dan tidak boleh diisi angka karangan |
+| R7 | Hasil eksekusi dikarang karena dikejar deadline | Integritas laporan rusak | Aturan keras: bagian yang belum dieksekusi dibiarkan kosong dan tidak boleh diisi angka karangan |
 
 ## 8. Alur Kerja & Proses Pelaporan Defect
 
