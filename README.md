@@ -4,13 +4,27 @@ Laporan tugas Testing & QA: pengujian website katalog kaos polos dan sablon DTF 
 
 Standar acuan: ISO/IEC/IEEE 29119 dan ISO/IEC 25010:2023. Semua standar dan jurnal yang dipakai terbit 2022–2026, lengkapnya di [01-references/standards-journals.md](01-references/standards-journals.md).
 
-Identitas Kelompok
-Kelompok 9 — Mata Kuliah Testing & QA Perangkat Lunak, Universitas Pamulang.
+## 📋 Identitas Penyusun
 
-No	Nama	NIM
-1	Mohamad Taufik Wibowo	231011400164
-2	Riyan Hidayat	231011400539
-3	Willy Saputro	231011401187
+### Anggota Kelompok
+
+| No | Nama Mahasiswa | NIM |
+|---|---|---|
+| 1 | Mohamad Taufik Wibowo | 231011400164 |
+| 2 | Riyan Hidayat | 231011400539 |
+| 3 | Willy Saputro | 231011401187 |
+
+### Informasi Akademik
+
+| Keterangan | Informasi |
+|---|---|
+| Kelompok | Kelompok 9 |
+| Kelas / Ruang | V.714 |
+| Program Studi | Teknik Informatika |
+| Fakultas | Ilmu Komputer |
+| Perguruan Tinggi | Universitas Pamulang |
+| Mata Kuliah | Testing & QA Perangkat Lunak |
+| Dosen Pengampu | ASEP ERLAN MAULANA S.KOM., M.KOM |
 
 ## Daftar Isi
 
