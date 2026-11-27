@@ -1,6 +1,6 @@
 # QA Testing — Website yajaya.store
 
-Laporan tugas Testing & QA: pengujian website katalog kaos polos dan sablon DTF satuan milik Yajaya Store, Parung, Bogor. Pengujian dilakukan murni dari sudut pandang pelanggan (external / customer perspective): semua yang diuji adalah antarmuka pengguna, alur bisnis, perilaku HTTP dan performa, serta validasi input dari luar. Tidak ada white-box testing dan tidak ada akses ke source code backend.
+Laporan tugas Testing & QA: pengujian website katalog kaos polos dan sablon DTF satuan milik Yajaya Store, Parung, Bogor. Pengujian dilakukan murni dari sudut pandang pelanggan (external / customer perspective): semua yang diuji adalah antarmuka pengguna, alur bisnis, perilaku HTTP dan performa, serta validasi input dari luar. Pengujian white-box belum dapat dilakukan karena kelompok tidak memperoleh akses ke source code backend. Oleh karena itu, pengujian yang telah dilakukan pada tahap ini berfokus pada black-box testing dari sisi pelanggan. Keterbatasan white-box testing akan dicatat dalam laporan dan dikonsultasikan kepada dosen/pihak terkait.
 
 Standar acuan: ISO/IEC/IEEE 29119 dan ISO/IEC 25010:2023. Semua standar dan jurnal yang dipakai terbit 2022–2026, lengkapnya di [01-references/standards-journals.md](01-references/standards-journals.md).
 
