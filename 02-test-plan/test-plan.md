@@ -201,15 +201,15 @@ Deadline pengumpulan laporan: **Sabtu, 5 Desember 2026**. Aturan pacing dari dos
 | Inventaris website | 20 Nov 2026 | Selesai |
 | Tahap 1: README + referensi | 20 Nov 2026 | Selesai |
 | Tahap 2: test plan (dokumen ini) | 20 Nov 2026 | Selesai |
-| Tahap 3 audit: test case manual | 21–23 Nov 2026 | Belum dimulai |
-| Tahap 4 audit: bug report | 23–25 Nov 2026 | Belum dimulai |
-| Tahap 5: test report | 25–27 Nov 2026 | Belum dimulai |
-| Tahap 6: automation (Cypress, JMeter, ZAP) | 27 Nov–1 Des 2026 | Belum dimulai |
-| Tahap 7: wawancara QA/tester | 27 Nov–1 Des 2026 | Belum dimulai (butuh narasumber) |
-| Eksekusi formal test case + retest | 1–3 Des 2026 | Belum dimulai |
+| Tahap 3 audit: test case manual | 28–29 Nov 2026 | Draft selesai, belum di-push |
+| Tahap 4 audit: bug report | 28–29 Nov 2026 | Draft selesai, belum di-push |
+| Tahap 5: test report | 29–30 Nov 2026 | Belum dimulai |
+| Tahap 6: automation (Cypress, JMeter, ZAP) | 30 Nov–2 Des 2026 | Belum dimulai |
+| Tahap 7: wawancara QA/tester | 30 Nov–2 Des 2026 | Belum dimulai (butuh narasumber) |
+| Eksekusi formal test case + retest | 2–4 Des 2026 | Belum dimulai |
 | Finalisasi laporan + push terakhir | 4–5 Des 2026 | Belum dimulai |
 
-Jadwal di atas adalah rencana. Kalau wawancara belum dapat narasumber atau dashboard belum bisa diuji, bagian yang tertunda dicatat sebagai `[DIISI_SETELAH_WAWANCARA]` atau `Blocked` di laporan, bukan diisi dengan hasil karangan.
+Jadwal di atas adalah rencana. Kalau wawancara belum dapat narasumber, bagian yang tertunda dicatat sebagai `[DIISI_SETELAH_WAWANCARA]` atau `Blocked` di laporan, bukan diisi dengan hasil karangan.
 
 ## 7. Risiko dan Mitigasi
 
