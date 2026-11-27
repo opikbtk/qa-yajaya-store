@@ -275,5 +275,5 @@ Catatan: karena tim penguji adalah mahasiswa dan pemilik website adalah pihak ek
 Aturan kolaborasi (tugas kelompok):
 
 - Tidak ada push ke GitHub yang dilakukan tiba-tiba. Setiap push dikoordinasikan dulu dengan anggota kelompok supaya semua anggota tercatat sebagai contributor.
-- Pesan commit ditulis natural dan deskriptif seperti mahasiswa biasa (contoh: "Update test plan", "Tambah test case"). Jangan memakai kata-kata meta seperti "rapikan gaya penulisan laporan" karena itu terlihat seperti hasil AI.
-- Gaya penulisan laporan natural seperti ditulis mahasiswa. Jangan memakai bahasa yang terlalu terlihat seperti template AI.
+- Pesan commit ditulis singkat dan deskriptif (contoh: "Update test plan", "Tambah test case").
+- Setiap bagian laporan ditulis dengan bahasa sendiri, bukan disalin mentah dari template.
