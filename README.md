@@ -89,23 +89,25 @@ qa-yajaya-store/
 ├── README.md
 ├── 00-docs/
 │   └── site-inventory-2026-11-20.md        # Inventaris website (multi-halaman, 19 produk, login)
-├── 02-test-plan/
-│   └── test-plan.md                        # Test plan
-├── test-cases/
-│   ├── test-cases-manual.md                # Test case manual (40 test case)
-│   └── test-execution-log.md               # Log eksekusi test case
-├── bug-reports/
-│   └── bug-reports.md                      # Bug report (23 bug)
 ├── 01-references/
 │   └── standards-journals.md               # Standar ISO/IEEE & jurnal 2022–2026
-├── automation/
+├── 02-test-plan/
+│   └── test-plan.md                        # Test plan
+├── 03-test-cases/
+│   └── test-cases-manual.md                # Test case manual (40 test case)
+├── 04-manual-testing/
+│   └── README.md                           # Hasil eksekusi testing manual
+├── 05-automation/
+│   ├── README.md
 │   ├── cypress/                            # (direncanakan, Tahap 6)
 │   ├── jmeter/                             # (direncanakan, Tahap 6)
 │   └── security-dast/                      # (direncanakan, Tahap 6)
-├── interview/
-│   └── interview-guide.md                  # Panduan wawancara QA/tester ≥3 tahun
-└── test-report/                             # (direncanakan, Tahap 5)
-    └── test-report.md
+├── 06-bug-reports/
+│   └── bug-reports.md                      # Bug report (10 bug)
+├── 07-interview/
+│   └── interview-guide.md                  # (direncanakan, Tahap 7)
+└── 08-test-report/
+    └── test-report.md                      # (direncanakan, Tahap 5)
 ```
 
 Tautan langsung ke file-file utama:
