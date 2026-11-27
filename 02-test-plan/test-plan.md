@@ -93,7 +93,7 @@ Yang bukan tujuan pengujian ini: menilai kualitas kode sumber, mengukur code cov
 
 1. Website <https://www.yajaya.store/> bisa diakses dan mengembalikan HTTP 200.
 2. Inventaris website yang diuji sudah selesai dan didokumentasikan ([00-docs/site-inventory-2026-11-20.md](../00-docs/site-inventory-2026-11-20.md)).
-3. Test plan ini sudah disetujui oleh tim (lihat bagian 9).
+3. Test plan ini sudah dibaca oleh tim (persetujuan formal di bagian 9).
 4. Lingkungan pengujian sudah siap: browser Chrome, Firefox, dan Edge; perangkat desktop dan mobile; akses internet stabil.
 5. Daftar test case manual sudah ditulis dan diberi ID serta prioritas.
 
@@ -137,9 +137,9 @@ Catatan: laporan ini adalah tugas kelompok. Setiap anggota harus tercatat sebaga
 | Tool | Kegunaan | Status |
 |---|---|---|
 | Google Chrome, Mozilla Firefox, Microsoft Edge | Browser pengujian manual dan compatibility testing | Tersedia |
-| Cypress | Automation E2E: login, navigasi, katalog | Draf skrip (Tahap 6), belum dieksekusi |
+| Cypress | Automation E2E: login, navigasi, katalog | Rencana (Tahap 6), belum dieksekusi |
 | Apache JMeter | Performance testing: load, stress, spike | Rencana test case (Tahap 6), belum dieksekusi |
-| OWASP ZAP | Security DAST: baseline scan, header keamanan, uji input | Panduan (Tahap 6), belum dieksekusi |
+| OWASP ZAP | Security DAST: baseline scan, header keamanan, uji input | Rencana (Tahap 6), belum dieksekusi |
 | Node.js | HTTP smoke test (pengganti sementara saat Playwright gagal) | Tersedia, hasil 5/5 lolos |
 | GitHub | Repository laporan, 1 direktori, riwayat commit sebagai bukti progress | Tersedia, publik |
 | Google Sheets / Markdown | Log eksekusi dan pencatatan defect | Tersedia |
@@ -181,7 +181,7 @@ Semua skrip otomatisasi masih berupa draf dan belum dieksekusi di lingkungan fin
 
 ### 5.4 Alasan manual + otomatis dipakai bersamaan
 
-Kurmaku dkk. (2022) me-meta-analisis 21 studi dan menyimpulkan testing otomatis lebih hemat biaya, coverage, dan waktu, tetapi testing manual sama baiknya, bahkan sedikit lebih baik, dalam menemukan fault — dan bedanya tidak signifikan secara statistik. Karena itu proyek ini memakai keduanya: manual untuk menemukan masalah yang butuh penilaian manusia (tampilan, konsistensi konten, alur bisnis), otomatis untuk mengulang skenario yang sama secara konsisten.
+Kurmaku dkk. (2022) melakukan meta-analisis terhadap 21 studi dan menyimpulkan testing otomatis lebih hemat biaya, coverage, dan waktu, tetapi testing manual sama baiknya, bahkan sedikit lebih baik, dalam menemukan fault — dan bedanya tidak signifikan secara statistik. Karena itu proyek ini memakai keduanya: manual untuk menemukan masalah yang butuh penilaian manusia (tampilan, konsistensi konten, alur bisnis), otomatis untuk mengulang skenario yang sama secara konsisten.
 
 ## 6. Jadwal dan Milestone
 
