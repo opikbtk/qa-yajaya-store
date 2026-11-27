@@ -40,7 +40,7 @@ Yang bukan tujuan pengujian ini: menilai kualitas kode sumber, mengukur code cov
 
 - Halaman `/login` dan `/register`: tombol "Lanjutkan dengan Google" dan "Daftar Cepat dengan Google", teks dan janji fitur di halaman register.
 - Rute terkunci `/dashboard` dan `/dashboard/pesanan/baru`: perilaku saat dibuka tanpa login (pengalihan ke halaman login).
-- Dashboard, tracking pesanan, dan invoice: **terbatas** — hanya bisa diuji bila tersedia akun Google tes (lihat Risiko, bagian 7).
+- Dashboard, tracking pesanan, dan invoice: sudah diuji dengan akun Google tes (lihat inventaris); yang belum bisa diuji: timeline tracking produksi dan invoice, karena keduanya baru muncul setelah ada pesanan.
 
 **Katalog dan produk**
 
@@ -187,13 +187,13 @@ Kurmaku dkk. (2022) melakukan meta-analisis terhadap 21 studi dan menyimpulkan t
 
 Deadline pengumpulan laporan: **Sabtu, 5 Desember 2026**. Aturan pacing dari dosen: progress di GitHub harus terlihat setiap 1–2 hari (kotak kontribusi hijau menyala), jadi pekerjaan dipecah per batch dan tidak di-push sekaligus.
 
-| Milestone | Target | Status per 20 Nov 2026 |
+| Milestone | Target | Status |
 |---|---|---|
 | Inventaris website | 20 Nov 2026 | Selesai |
 | Tahap 1: README + referensi | 20 Nov 2026 | Selesai |
 | Tahap 2: test plan (dokumen ini) | 20 Nov 2026 | Selesai |
-| Tahap 3 audit: test case manual | 28–29 Nov 2026 | Draft selesai, belum di-push |
-| Tahap 4 audit: bug report | 28–29 Nov 2026 | Draft selesai, belum di-push |
+| Tahap 3 audit: test case manual | 28–29 Nov 2026 | Selesai (di-push 27 Nov 2026) |
+| Tahap 4 audit: bug report | 28–29 Nov 2026 | Selesai (di-push 27 Nov 2026) |
 | Tahap 5: test report | 29–30 Nov 2026 | Belum dimulai |
 | Tahap 6: automation (Cypress, JMeter, ZAP) | 30 Nov–2 Des 2026 | Belum dimulai |
 | Tahap 7: wawancara QA/tester | 30 Nov–2 Des 2026 | Belum dimulai (butuh narasumber) |
@@ -207,7 +207,7 @@ Jadwal di atas adalah rencana. Kalau wawancara belum dapat narasumber, bagian ya
 | # | Risiko | Dampak | Mitigasi |
 |---|---|---|---|
 | R1 | Website berubah selama pengujian | Inventaris dan test case kedaluwarsa | Setiap perubahan website dicek ulang dulu sebelum laporan final |
-| R2 | Dashboard tidak bisa diuji (butuh akun Google asli, tidak ada akun demo) | Test case login/auth sebagian Blocked | Catat sebagai Blocked dengan jelas; minta pemilik situs menyediakan akun tes; bila tidak ada, bagian dashboard ditulis sebagai keterbatasan, bukan defect |
+| R2 | Dashboard butuh akun Google asli, tidak ada akun demo | Invoice dan beda admin-customer belum bisa diuji | Dashboard sudah diuji dengan akun Google tes; invoice dan beda admin-customer ditulis sebagai keterbatasan, bukan defect |
 | R3 | Narasumber wawancara belum ada | Syarat wawancara tidak terpenuhi | Cari narasumber lebih awal lewat jaringan kampus dan komunitas; bila sampai akhir belum ada, panduan wawancara tetap dilampirkan dan transkrip ditandai `[DIISI_SETELAH_WAWANCARA]` |
 | R4 | Instalasi browser/tool otomatisasi gagal (pernah terjadi pada Playwright) | Otomatisasi tertunda | Siapkan fallback: HTTP smoke test (Node) untuk pemeriksaan dasar; jalankan Cypress/JMeter di mesin lain bila perlu |
 | R5 | Anggota kelompok tidak tercatat sebagai contributor | Penilaian kelompok bermasalah | Semua push dikoordinasikan dulu; pembagian tugas dan username GitHub anggota dicatat sebelum push berikutnya |
