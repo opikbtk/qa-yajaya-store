@@ -18,7 +18,7 @@ Halaman /login judulnya "Masuk ke Akun Anda", dengan subjudul soal kelola pesana
 
 Tapi keduanya tidak punya kolom isian sama sekali. Tidak ada kolom email, tidak ada kolom password, tidak ada kolom nama, dan tidak ada lupa password. Masing-masing halaman cuma punya satu tombol: "Lanjutkan dengan Google" di halaman login, "Daftar Cepat dengan Google" di halaman register. Halaman register juga menulis tiga keuntungan: daftar sekali klik pakai Google, tracking sablon real-time, dan akses serta cetak invoice, plus tulisan privasi aman dan login terenkripsi resmi dari Google.
 
-Tidak ada akun demo yang ditampilkan di mana pun, sudah dicari kata "demo" di kedua halaman dan tidak ketemu. Karena login butuh akun Google asli, isi dashboard, bedanya tampilan admin dan customer, tracking pesanan, dan download atau cetak invoice tidak bisa kami cek. Form order di /dashboard/pesanan/baru juga tidak bisa dibuka.
+Tidak ada akun demo yang ditampilkan di mana pun, sudah dicari kata "demo" di kedua halaman dan tidak ketemu. Karena login butuh akun Google asli, dashboard, tracking, dan form order baru bisa dicek setelah mendaftar — kami mendaftar dengan akun Google tes pada malam yang sama dan hasilnya ada di bagian Dashboard di bawah. Yang tetap belum bisa dicek: bedanya tampilan admin dan customer, dan invoice, karena akun tes ini akun customer dan belum pernah memesan.
 
 ## Katalog: 19 produk
 
