@@ -258,7 +258,7 @@ Catatan: karena tim penguji adalah mahasiswa dan pemilik website adalah pihak ek
 |---|---|---|
 | Anggota kelompok 1 | Mohamad Taufik Wibowo (opikbtk) |  |
 | Anggota kelompok 2 | Riyan Hidayat (eriyeaenn) |  |
-| Anggota kelompok 3 | Willy Saputro dan (willysappp) |  |
+| Anggota kelompok 3 | Willy Saputro (willysappp) |  |
 | Dosen pengampu Testing & QA | Asep Erlan Maulana, S.Kom., M.Kom. |  |
 | Pemilik website (Yajaya Store) | Pemilik toko (stakeholder eksternal, penerima rekomendasi) | Tidak diminta persetujuan formal — menerima laporan defect dan rekomendasi |
 
