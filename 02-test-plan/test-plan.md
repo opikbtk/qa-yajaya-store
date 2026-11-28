@@ -183,6 +183,14 @@ Skrip otomatisasi direncanakan di Tahap 6 dan belum dieksekusi. Hasil eksekusiny
 
 Kurmaku dkk. (2022) melakukan meta-analisis terhadap 21 studi dan menyimpulkan testing otomatis lebih hemat biaya, coverage, dan waktu, tetapi testing manual sama baiknya, bahkan sedikit lebih baik, dalam menemukan fault — dan bedanya tidak signifikan secara statistik. Karena itu proyek ini memakai keduanya: manual untuk menemukan masalah yang butuh penilaian manusia (tampilan, konsistensi konten, alur bisnis), otomatis untuk mengulang skenario yang sama secara konsisten.
 
+### 5.5 Pengujian API (terbatas)
+
+Pengujian API di proyek ini terbatas pada level HTTP, karena website tidak menyediakan API publik. Pengecekan tanggal 28 November 2026 ke endpoint `/api/auth/session`, `/api/products`, `/api/orders`, `/api/health`, `/api-docs`, dan `/openapi.json` semuanya mengembalikan 404 — tidak ada endpoint API, tidak ada dokumentasi API, dan tidak ada spesifikasi OpenAPI/Swagger yang bisa diuji.
+
+Yang masih bisa diuji dari sisi API: request GET dan kode status HTTP halaman (200 untuk halaman yang ada, 404 untuk `/cart`, `/checkout`, dan `/admin`), redirect dashboard ke halaman login kalau belum login, dan header respons (Content-Type, Strict-Transport-Security). Pengecekan ini sudah tercakup di HTTP smoke test.
+
+Yang tidak bisa diuji: POST, PUT, dan DELETE, operasi CRUD, validasi body JSON, token autentikasi, dan error handling 400/401 — karena endpointnya memang tidak ada. Penyebabnya: data produk ditulis langsung di frontend, pemesanan lewat WhatsApp, dan login memakai Google OAuth (API milik Google, bukan milik website). Karena itu pengujian API fungsional, keamanan API, dan beban di level API tidak dapat dilakukan di proyek ini; pengujian kinerja dan keamanan tetap dilakukan di level halaman lewat JMeter dan ZAP (lihat 5.2).
+
 ## 6. Jadwal dan Milestone
 
 Deadline pengumpulan laporan: **Sabtu, 5 Desember 2026**. Aturan pacing dari dosen: progress di GitHub harus terlihat setiap 1–2 hari (kotak kontribusi hijau menyala), jadi pekerjaan dipecah per batch dan tidak di-push sekaligus.
