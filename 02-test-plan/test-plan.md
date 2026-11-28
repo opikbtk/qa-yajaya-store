@@ -215,7 +215,7 @@ Jadwal di atas adalah rencana. Kalau wawancara belum dapat narasumber, bagian ya
 | # | Risiko | Dampak | Mitigasi |
 |---|---|---|---|
 | R1 | Website berubah selama pengujian | Inventaris dan test case kedaluwarsa | Setiap perubahan website dicek ulang dulu sebelum laporan final |
-| R2 | Dashboard butuh akun Google asli, tidak ada akun demo | Invoice dan beda admin-customer belum bisa diuji | Dashboard sudah diuji dengan akun Google tes; invoice dan beda admin-customer ditulis sebagai keterbatasan, bukan defect |
+| R2 | Dashboard butuh akun Google asli, tidak ada akun demo | Invoice belum bisa diuji | Dashboard sudah diuji dengan akun Google tes; invoice ditulis sebagai keterbatasan, bukan defect |
 | R3 | Narasumber wawancara belum ada | Syarat wawancara tidak terpenuhi | Cari narasumber lebih awal lewat jaringan kampus dan komunitas; bila sampai akhir belum ada, panduan wawancara tetap dilampirkan dan transkrip ditulis setelah wawancara dilakukan |
 | R4 | Instalasi browser/tool otomatisasi gagal (pernah terjadi pada Playwright) | Otomatisasi tertunda | Siapkan fallback: HTTP smoke test (Node) untuk pemeriksaan dasar; jalankan Cypress/JMeter di mesin lain bila perlu |
 | R5 | Anggota kelompok tidak tercatat sebagai contributor | Penilaian kelompok bermasalah | Semua push dikoordinasikan dulu; pembagian tugas dan username GitHub anggota dicatat sebelum push berikutnya |
